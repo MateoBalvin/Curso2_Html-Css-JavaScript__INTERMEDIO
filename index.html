@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso #2 Html-Css-JavaScript - Intermedio</title>
+
+    <link rel="stylesheet" href="Practica Html-Css/style-index.css" />
+
+    <!-- Links para fuentes de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- --SVG-- -->
+    <!-- Poner imagenes por medio de vectores,-->
+    <!-- Imagina plano cartesiano x =cx y y=yx.. pero el y es invertido y radio = r 
+    SVG:
+    Para aumentar el tamaño del svg con widht y height, practicamente es como un div
+
+
+    CIRCLE:
+     cx = direccion 'x'
+     cy = direccion 'y' invertido
+     r = radio
+     stroke = borde del circulo, es decir la linea para cambiar color
+     stroke-width = el tamaño del borde del circulo
+     fill = relleno del circulo, es decir lo que hay dentro del circulo, ejemplo cambiarle el color de dentro del circulo
+     
+    LINE:
+    x1: El primer punto donde se forma la linea en direccion x
+    y1: EL primer punto donde se forma la linea en direccion y
+    x2= EL sefundo punto Se necesita para forma la linea en direccion x
+    y2= EL segundo punto se necesita para formar la linea en direcicon y
+    
+    TEXT:
+    x = direcicon x
+    y = direccion y
+    fill = color
+
+     -->
+
+    <h2>Graficos SVG</h2>
+    <svg width="500" height="300">
+      <circle
+        cx="150"
+        cy="150"
+        r="100"
+        stroke="blue"
+        stroke-width="4"
+        fill="pink"
+      />
+      <!-- esto es para crear un circulo -->
+      <line x1="150" y1="150" x2="250" y2="150" stroke="red" stroke-width="5" />
+
+      <text x="150" y="140" fill="blue">radio = 100</text>
+    </svg>
+
+    <h2>TABLAS</h2>
+    <!-- TABLAS -->
+    <!-- 
+
+    table = Para crear las tablas
+    tr = Filas
+    th = Columnas Principales
+    td = Columnas secundarias donde se pone la informacion que dictan las columnas principales
+
+    colspan="" - Combinar columnas
+    rowspan="" - Combinar filas
+     -->
+    <table>
+      <!-- Fila 1 -->
+      <tr>
+        <th>Nombre</th>
+        <!-- Columnas -->
+        <th>Apellido</th>
+        <th>Email</th>
+      </tr>
+
+      <!-- Fila 2 -->
+      <tr>
+        <td>Mateo</td>
+        <td>Balvin</td>
+        <td>mateo@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Thiago Londoño</td>
+        <!-- colspan="" -Para combinar la columnas y poner el numero de cuantas celdas queremos combinar -->
+
+        <td>Teodoro@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td>Matix</td>
+        <td>Rex</td>
+        <td>GamerMatixRex@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Thor</td>
+        <!--rowspan="" - Combinar filas-->
+        <td rowspan="2">Odinson</td>
+        <td>thor@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td>diosdeltrueno@gmail.com</td>
+      </tr>
+    </table>
+
+    <!-- EJEMPLO DE TABLA -->
+    <h3>Ejemplo de tablas:</h3>
+    <table>
+      <!-- fila 1 -->
+      <tr>
+        <th>Raza de perro</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+      </tr>
+
+      <tr>
+        <td>Husky</td>
+        <td>Alpha</td>
+        <td>3 meses</td>
+      </tr>
+
+      <tr>
+        <td>Pastor aleman</td>
+        <td>Princesa</td>
+        <td>2 años</td>
+      </tr>
+
+      <tr>
+        <td>Pomenaria</td>
+        <td>Lucifer</td>
+        <td>1 año</td>
+      </tr>
+    </table>
+
+    <!-- UNIDADES DE MEDIDA -->
+    <h2>UNIDADES DE MEDIDAS</h2>
+
+    <!-- Unidad por px -->
+    <h3>- Unidad por px = Pixeles</h3>
+    <h4>Año 2019</h4>
+    <div class="año-2019">
+      <img src="image/bros 2019.jpeg" alt="bros 2019" class="foto-2019" />
+    </div>
+
+    <h3>- Unidad por % = Porcentaje</h3>
+    <!-- Que pasa cuando no sabemos cuanto mide la imagen y queremos que este al 100% la imagen en su contenedor -->
+    <h4>Año 2020</h4>
+    <div class="año-2020">
+      <img
+        src="image/bros 2020 inicio.jpeg"
+        alt="bros 2020"
+        class="foto-2020"
+      />
+    </div>
+
+    <h3>- Unidad por view-height= vh</h3>
+    <!-- Que pasa cuando no sabemos cuanto mide la imagen y queremos que este al 100% la imagen en su contenedor -->
+    <h4>Año 2020 finales</h4>
+    <div class="año-2020-finales">
+      <img
+        src="image/bros 2020 finales.jpeg"
+        alt="bros 2020-finales"
+        class="foto-2020-finales"
+      />
+    </div>
+
+    <h3>- Unidad por view-wight= vw</h3>
+    <!-- Que sa cuando no sabemos cuanto mide la imagen y queremos que este al 100% la imagen en su contenedor -->
+    <h4>Año 2023</h4>
+    <div class="año-2023">
+      <img src="image/bros 2023.jpeg" alt="bros 2023" class="foto-2023" />
+    </div>
+
+    <h3>- Unidad por Em</h3>
+    <!-- Que sa cuando no sabemos cuanto mide la imagen y queremos que este al 100% la imagen en su contenedor -->
+    <h4>Año 2024 finales</h4>
+    <div class="año-2024">
+      <img
+        src="image/bros 2024 finales.jpeg"
+        alt="bros 2024"
+        class="foto-2024"
+      />
+    </div>
+
+    <!-- CAMBIAR EL ESTILO DE TEXTO -->
+    <h2 class="estilo-fuente1">CAMBIAR EL ESTILO DE TEXTO</h2>
+    <!-- Entrar en googles Font y cuando elijas que fuente usar, copia el 'link' para html y 'Css' y lo pegas, para poder usar esa fuente sin problema  -->
+    <div class="estilo-fuente_div">
+      <p class="estilo-fuente2">
+        Parrafo con cambio de estilo fuente para el texto
+      </p>
+      <p class="estilo-fuente3">Parrafo prueba</p>
+    </div>
+
+    <!-- PSEUDO-SELECTORES -->
+    <h2>-- PSEUDO-SELECTORES --</h2>
+    <div class="seudo1">
+      <!-- :focus -->
+      <h3>-- :focus --</h3>
+      <input type="text" class="focus-seudo" />
+      <a href="" class="focus-seudo">Prueba :focus</a>
+      <button class="focus-seudo">Prueba :focus</button>
+      <textarea name="" id="" class="focus-seudo">Prueba de :focus</textarea>
+
+      <h3>-- :hover --</h3>
+      <input type="text" class="hover-seudo" />
+      <a href="" class="hover-seudo">Prueba :hover</a>
+      <button class="hover-seudo">Prueba :hover</button>
+      <!-- <p class="parrafo1 hover-seudo">Prueba :hover</p> -->
+
+      <h3>-- :active --</h3>
+      <a href="" class="active-seudo">Prueba :active</a>
+      <button class="active-seudo">Prueba :active</button>
+
+      <h3>-- :visited --</h3>
+      <a href="" class="visited-seudo">Prueba :hover</a>
+    </div>
+
+    <!-- PSEUDOELEMENTOS -->
+    <h2>-- PSEUDO-ELEMENTOS --</h2>
+    <div class="seudo2">
+      <h3>-- ::marker --</h3>
+      <ol class="marker-seudo">
+        <li class="marker-seudo">Parrafo 1 ::marker</li>
+        <li class="marker-seudo">Parrafo 2 ::marker</li>
+      </ol>
+      <ul class="marker-seudo">
+        <li class="marker2-seudo">Parrafo 3 ::marker</li>
+        <li class="marker2-seudo">Parrafo 4 ::marker</li>
+      </ul>
+      <ul class="marker-seudo">
+        <li class="marker3-seudo">Parrafo 5 ::marker</li>
+        <li class="marker3-seudo">Parrafo 6 ::marker</li>
+      </ul>
+
+      <h3>-- ::first-letter --</h3>
+      <p class="first1-seudo">Balvin</p>
+
+      <h3>-- ::first-line --</h3>
+      <p class="first2-seudo">Balvin</p>
+
+      <h3>-- ::selection --</h3>
+      <p class="selection-seudo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        repellendus ex minima tenetur reprehenderit provident eius nulla?
+      </p>
+
+      <h3>-- ::Before - ::After --</h3>
+      <div class="before-seudo">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+      </div>
+    </div>
+
+    <!-- POSICIONES -->
+    <h2>-- POSICIONES --</h2>
+    <h3>- Position relative -</h3>
+    <div class="relative-div">
+      <img src="image/fondoprueba.jpg" alt="" class="relative1-foto" />
+      <!-- <img src="image/descarga.jpg" alt="" class="relative2-foto"> -->
+    </div>
+
+    <h3>- Position absolute -</h3>
+    <div class="absolute-div">
+      <img src="image/descarga (1).jpg" alt="" class="absolute1-foto" />
+      <img src="image/descarga.jpg" alt="" class="absolute2-foto" />
+    </div>
+
+    <!-- FONDO DEGRADADO -->
+    <h2>-- FONDO DEGRADADO --</h2>
+
+    <div class="fondo-degradado"></div>
+
+    <!-- FUNCIONES MATEMATICAS DE CSS -->
+    <h2>-- FUNCIONES MATEMATICAS DE CSS --</h2>
+
+    <p>
+      - Calc(): Permite hacer calculos matematicos directamente dentro de CSS-
+    </p>
+    <p>Restarle 400 pixeles al 100% del div o contenedor en el que esta</p>
+    <div class="calc-div"></div>
+
+    <h3>- Min() -</h3>
+    <div class="min-div"></div>
+
+    <h3>- Max() -</h3>
+    <div class="max-div"></div>
+
+    <h3>- Clamp() -</h3>
+    <div class="clamp-div"></div>
+
+    <!-- VARIABLES - PROPIEDADES PERSONALIZADAS -->
+    <h2>-- PROPIEDADES PERSONALIZADAS - VARIABLES --</h2>
+
+    <p class="variable-parrafo">Variable 1 con CSS</p>
+
+
+    <!-- -- INPUT -- -->
+    <h2>-- INPUT --</h2>
+
+    <h3>Input tipo texto</h3>
+    <input type="text" name="" id="">
+
+    <h3>Input tipo email</h3>
+    <input type="email" name="user_email" id="">
+
+    <h3>Input tipo contraseña</h3>
+    <input type="password" name="" id="">
+
+    <h3>Input tipo numero</h3>
+    <input type="number" name="" id="">
+
+    <h3>Input tipo fecha</h3>
+    <input type="date" name="" id="">
+
+    <h3>Input tipo radio, botoncito pequeño</h3>
+    <input type="radio" name="" id="">
+
+    <h3>Input tipo casilla de verificacion 'checkbox'</h3>
+    <input type="checkbox" name="" id="">
+
+    <h3>Input tipo telefono</h3>
+    <input type="tel" name="" id="">
+
+    <h3>EJEMPLO #1 DE INPUT</h3>
+    <div class="ejemplo1-1">
+      <label for="">Nombre</label>
+      <input type="text" class="input-ejemplo" name="password" />
+      <button class="boton-ejemplo">Saludo exotic</button>
+      <p class="parrafo1-ejemplo"></p>
+    </div>
+
+    <h3>EJEMPLO #2 DE INPUT</h3>
+    <h4>Ingredientes de la Pizza</h1>
+
+    <div>
+      <input type="checkbox" id="sausage" name="topping" value="sausage">
+      <label for="sausage">Sausage</label>
+    </div>
+    
+    <div>
+      <input type="checkbox" id="onions" name="topping" value="onions">
+      <label for="onions">Onions</label>
+    </div>
+    
+    <div>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+    
+    <div>
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+        
+
+    <!-- --SELECT CON EL OPTION-- -->
+     <h2>-- LISTA DESPLEGABLE - SELECT CON EL OPTION --</h2> <!-- 
+     
+        -<select> : Se usa para crear una lista desplegable
+        -<option>: Se usa dentro del 'select'para crear los nombres que va tener la lista
+     
+     -->
+    <select name="car" id="carro_id">
+        <option value="mercedes">Mercedes</option>
+        <option value="tesla">Tesla</option>
+        <option value="BMW">BMW</option>
+    </select>
+
+    <select name="raza-perros" id="raza_id">
+        <option value="husky">Husky</option>
+        <option value="pastor">Pastor Aleman</option>
+        <option value="bull">Bulldog</option>
+        <option value="golden">Golden Retriever</option>
+    </select>
+
+
+  <!-- --FORM-- -->
+  <h2>-- FORM --</h2>
+  <!--
+    <form>: Es un elemento contenedor como el div
+    action="": Toma un valor URL que indica al formulario donde se dee enviar sus datos para su procesamiento
+    method="": Indica al navagegador que solicitud'HTTP' debe usarse como el GET y POST que son lo mas usados
+
+    -GET =  Se usa normalmente para buscar o consultar información, es decir, Cuando queremos recuperar informacion de un servidor o envia datos en la URL. No es seguro para enviar contraseñas o datos privados
+     Por ejemplo, Google usa una solicitud GET al realizar una búsqueda, ya que obtiene los resultados. 
+
+    -POST = Se usa para enviar o crear datos al servidor, tambien envía los datos en el cuerpo (body) de la solicitud, no visibles en la URL, tambien se utiliza cuando queremos cambiar algo en el servidor - MAS SEGURO PARA DATOS SENSIBLES
+     Por ejemplo, cuando un usuario crea una cuenta o realiza un pago en un sitio web.
+
+    -PUT = Se usa para actualizar recursos -  usado mas que todo en APIs - En HTML no se puede usar directamente en <form>. Pero con JavaScript o frameworks como Laravel
+
+    -DELETE = Se usa para eliminar datos - Se usa mas que todo en APIs 'Aplicacions RESTful'
+    -->
+
+  <form action="" method="post"></form>
+
+
+   <!-- --VALIDACION DE FORMULARIO-- -->
+    <h2>-- VALIDACION DE FORMULARIO - FORM --</h2>  <!--
+    RECUERDA QUE TODO DEBE ESTAR DENTRO DEL FORM:
+
+    -required: Se pone al finalizar un 'input' , todo dentro de un form, queremos asegurarnos de que se hayan completado campos específicos antes de enviar el formulario, por ejemplo, el correo electrónico y la contraseña en un formulario de inicio de sesión
+
+    -minlenght: representa la cantidad mínima de caracteres que queremos permitir en el control de formulario
+    
+    -maxlenght Representa la cantidad maxima de caracteres que queremos permitir en un texto
+    
+    -min: Un valor entero que representa el número mínimo que queremos que el control de formulario acepte
+
+    value="":Es el numero principal que aparecera en pantalla
+
+    -max: Un valor entero que representa el número máximo que queremos que el control de formulario acepte
+    -->
+    <h3>RECUERDA QUE TOODO DEBE ESTAR DENTRO DEL FORM</h3>
+    <h3>- required - Validacion requerida -</h3>
+    <div>
+        <form action="#" method="get"> 
+
+            <div>
+              <label for="user_email">Email:</label>
+
+              <input type="email" id="user_email" name="user_email" required>
+            </div>
+          
+            <button type="submit">Login</button>
+          </form>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+    <h3>minlenght - Validación de longitud mínima</h3>
+
+    <div>
+        <form action="#" method="get">
+            <div>
+              <textarea placeholder="Minimo 3 caracteres" minlength="3"></textarea>  <!-- QUe tenga minimo tenga 3 letras -->
+            </div>
+            
+            <button type="submit">Enviar</button>
+          </form>
+    </div>
+
+    <h3>maxlenght - Validación de longitud maxima</h3>
+
+    <div>
+        <form action="#" method="get">
+            <div>
+              <textarea placeholder="Maximo 10 caracteres" maxlength="10"></textarea>  <!-- Que tenga maximo tenga 10 letras -->
+            </div>
+            
+            <button type="submit">Enviar</button>
+          </form>
+    </div>
+
+    <h4>Ejemplo usando las dos</h4>
+    <div>
+        <div>
+            <form action="#" method="get">
+                <div>
+                  <textarea placeholder="Minimo 3 y maximo 10 caracteres" maxlength="3" maxlenght="10"></textarea>  <!-- Que tenga maximo tenga 10 letras -->
+                </div>
+                
+                <button type="submit">Enviar</button>
+              </form>
+        </div>
+    </div>
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+    <h2>- min - Validación mínima -</h2>
+
+    <div>
+        <form action="#" method="get">
+            <div>
+              <label for="quantity">Numero minimo es el 1</label>
+            </div>
+            <input type="number" min="1" value="0" class="validacion"> <!-- min= Como minimo tenga ese numero que coloquemos - value=Es el numero principal que aparecera en pantalla --> 
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+    </div>
+
+    <h2>- max - Validación maxima -</h2>
+    <div>
+        <form action="#" method="get">
+            <div>
+              <label for="quantity">EL numero maximo es el 5</label>
+            </div>
+            <input type="number" max="5" value="0" class="invalidacion"> <!-- min= Como minimo tenga ese numero que coloquemos - value=Es el numero principal que aparecera en pantalla --> 
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

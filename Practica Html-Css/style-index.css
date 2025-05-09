@@ -1,0 +1,517 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse; /*Ayuda para que se junten los bordes y quede bien la tabla*/
+  padding: 5px;
+}
+
+/*-- UNIDADES DE MEDIDA --*/
+/*Unidad por pixeles: px */
+.año-2019 {
+  background-color: red;
+  width: 500px;
+  height: 400px;
+}
+
+.foto-2019 {
+  width: 500px;
+  height: 400px;
+}
+
+/*Unidades por porcentaje: % */
+
+/* Que pasa cuando no sabemos cuanto mide la imagen y queremos que este al 100% la imagen en su contenedor */
+/* si hacemos un cambio al contenedor osea el div, si usamos el '%' este siempre usara el porcentaje que le coloquemos restante al div independientemente el tamaño que tenga el contenedor*/
+.año-2020 {
+  background-color: aqua;
+  width: 500px;
+  height: 500px;
+}
+
+.foto-2020 {
+  width: 85%; /*EL ancho esta al 85% del div que esta dentro, */
+  height: 95%; /*La altura esta al 95% del div que esta dentro*/
+}
+
+/*Unidades por view-Height = vh*/
+/*Se usa para la altura. Esta unidad ocupa el espacio de la ventana, es decir, la vista, osea que cuando minimizemos la pantalla o la ampliemos el elemento que tenga vh ajustara la altura siempre sobre ventana, no al div o al contenedor que esta dentro*/
+
+.año-2020-finales {
+  background-color: rgb(141, 158, 255);
+  width: 500px;
+  height: 400px;
+}
+.foto-2020-finales {
+  width: 400px;
+  height: 40vh;
+}
+
+/*Unidades por view-Height = vh*/
+/*Se usa para el ancho. Esta unidad ocupa el espacio de la ventana, es decir, la vista, osea que cuando minimizemos la pantalla o la ampliemos el elemento que tenga vw ajustara el ancho del elemento sobre la ventana, no al div o al contenedor que esta dentro*/
+.año-2023 {
+  background-color: violet;
+  width: 500px;
+  height: 400px;
+}
+
+.foto-2023 {
+  width: 50vh;
+  height: auto;
+}
+
+/*Unidades por em*/
+/*Principalmente se usa para los tamaños del texto, es decir fuente Toma base de referencia el tamaño base de su div padre, quiere decir que depende del tamaño fuente del contenedor, se puede decir que 1 em* es e 100% de tamaño fuete del elemento padre*/
+
+.año-2024 {
+  background-color: cadetblue;
+  width: 500px;
+  height: 400px;
+}
+
+.foto-2024 {
+  width: 30em;
+  height: auto;
+}
+
+/*-- CAMBIAR ESITLO DE FUENTES PARA TEXTO*/
+/*Entrar en googles Font y cuando elijas que fuente usar, copia el 'link' para html y 'Css' y lo pegas, para poder usar esa fuente sin problema  */
+
+/*Pegamos lo que esta en la pagina pero parece talvez no sea necesario pero por las moscas*/
+.creepster-regular {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-iso-regular {
+  font-family: "Rubik Iso", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Y ahora con un font-family cambiamos la fuente de la letra con el nombre de la nueva fuente*/
+.estilo-fuente1 {
+  font-family: "Creepster";
+  font-size: 30px;
+  font-style: italic;
+}
+.estilo-fuente2 {
+  font-family: "Rubik Iso";
+  font-size: 20px;
+}
+
+/*MAS COMANDOS DE ESTILOS PARA EL TEXTO
+-------------------------------------------------------------------
+font-style: Cambio de estilo en la letra como cursiva
+
+ejemplo:
+.parrafo{
+font-style: italic; - Letra cursiva
+}
+---------------------------------------------------------------
+-letter-spacing: Espacio entre letras
+
+Ejemplo:
+.parrafo1{
+letter-spacing: 5em;
+}
+----------------------------------------------------------------
+-line-height: Imagina que fuera un margin-top, es para separar otro texto hacia arriba
+
+Ejemplo:
+.parrafo{
+line-height: 10; - Es como si fuera un margin-top,espacio hacia arriba entre otro texto
+}
+-------------------------------------------------------------
+-text-shadow: Sombreado al texto
+
+Ejemplo:
+.parrafo1{
+text-shadow: 10em;
+}
+----------------------------------------------------------------------------------
+-text-overflow: para que se produzca un desbordamiento, se requieren un par de propiedades más, ya que el comportamiento predeterminado de imprimir texto fuera de su contenedor no se considera técnicamente un overflow
+
+Ejemplo:
+.parrafo{
+overflow: hidden; - Es necesario para que funcione text-overflow
+text-overflow: ellipsis;
+-----------------------------------------------------------------------
+-box-shadow: crear una caja con sombra, se ve mejor cuando un div tiene  un border
+
+Ejemplo:
+.parrafo{
+box-shadow: 10px 5px 5px red; - (Tamaño de la sombra, Distancia de la sombra, Sombra borrosa, Color)
+}
+---------------------------------------------------------------------------------------------------
+-opacity: La opacidad de los elementos
+
+Ejemplo:
+.parrafo{
+opacity: 0; - No se ve
+opacity: 0.33; - Se opaca poco
+opacity: 1; - Se ve perfectamente
+*/
+
+.estilo-fuente3 {
+  font-size: 25px;
+  font-style: italic; /*Letra cursiva*/
+
+  letter-spacing: 20px;
+  line-height: 5; /*Imagina q*/
+  text-shadow: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  opacity: 0.33;
+}
+
+.estilo-fuente_div {
+  width: 50%;
+  border: 1px solid black;
+  box-shadow: 30px 10px 10px rgba(255, 0, 0, 0.411);
+}
+
+/*--PSEUDO-SELECTORES--*/
+/*
+--Focus:--
+:focus: Se aplica principalmente cuando usamos un (input, a=links, buttons, textareas) justo cuando presionamos click se activa la accion que queremos y se mantiene, ejemolo que queremos que cambie de fondo y de color de texto cuando presioemos click
+
+ejemplo
+.button:focus{
+background-color: red;
+color: rgb(189, 0, 164);
+
+}
+----------------------------------------------------------------------------------
+--:Hover--
+A diferencia de focus, no hace falta darle click para realizar la accion, al contrario con SOLO PASAR EL MOUSE EN EL ELEMENTO, se activa la accion que queremos que haga
+
+Ejemplo:
+.a:hover{
+    color: rgb(255, 108, 108);
+    background-color: rgb(65, 78, 117);
+    border: 5px solid rgb(255, 100, 100);
+}
+-----------------------------------------------------------------------------------
+--:Active--
+Se usa principalmente para el 'a' y el 'button', se realiza la accion unicamente cuando presionamos click
+
+ejemplo:
+a:active{
+    color:rgb(157, 219, 255);
+    background-color: rgb(115, 56, 170);
+    padding: 10px;
+}
+
+
+
+
+*/
+.parrafo1 {
+  width: 150px;
+}
+
+/* :focus */
+.focus-seudo:focus {
+  background-color: rgb(236, 169, 124);
+  color: rgb(189, 0, 164);
+  padding: 7px;
+}
+
+/* :hover */
+.hover-seudo:hover {
+  color: rgb(255, 108, 108);
+  background-color: rgb(65, 78, 117);
+  border: 5px solid rgb(255, 100, 100);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* :active */
+.active-seudo:active {
+  color: rgb(157, 219, 255);
+  background-color: rgb(115, 56, 170);
+  padding: 10px;
+}
+
+/* :visited */
+.visited-seudo:visited {
+  color: rgb(3, 196, 255);
+}
+
+/*-- PSEUDO-ELEMENTOS --*/
+/*
+-- ::Maker --
+Permite personalizar el estilo de las viñetas o numeros de 'li'
+
+ejemplo:
+.marker-seudo::marker{
+    color: rgb(255, 72, 0);
+}
+
+-- ::first-letter - ::first-line
+First-letter: Permite personalizar la primera letra de cada palabra
+First-line: Permite personalizar toda palabra de texto
+
+ejemplo:
+.first1-seudo::first-letter{
+    color: blueviolet;
+}
+
+::first-line 
+.first2-seudo::first-line{
+    color: rgb(116, 136, 6);
+}
+
+-- ::Selection --
+Personaliza cada vez que resaltamos una palabra con el mouse
+
+ejemplo: 
+.selection-seudo::selection{
+    color: rgb(160, 247, 253);
+    background-color: rgb(69, 102, 33);
+    
+}
+*/
+
+/* ::marker */
+.marker-seudo::marker {
+  color: rgb(255, 72, 0);
+}
+.marker2-seudo::marker {
+  color: rgb(24, 214, 87);
+}
+.marker3-seudo::marker {
+  content: "🧡";
+}
+
+/* ::first-letter */
+.first1-seudo::first-letter {
+  color: blueviolet;
+}
+
+/* ::first-line */
+.first2-seudo::first-line {
+  color: rgb(116, 136, 6);
+}
+
+/* ::selection */
+.selection-seudo::selection {
+  color: rgb(160, 247, 253);
+  background-color: rgb(69, 102, 33);
+}
+
+/* ::before */
+.before-seudo::before {
+  content: " Usando el ::before: 🤓";
+}
+.before-seudo::after {
+  content: "Usando el ::after 😎";
+}
+
+/*POSICIONES*/
+/*
+-Position Relative:
+Podremos usar propiedades top,left,rigt,botton; Movemos el elemento pero la posicion original se sigue conservando, quiere decir que no nadie quien lo mueva, Se coloca en frente de los demas elementos, tambien adelante del absolute
+
+-Position Absolute:
+Puedo mover el elemento sin afectar a los otros elementos, es decir que no habra problema si muevo no se dañara el contexto de otros elementos. Se coloca en frente de los demaselementos, es decir, por encima, pero no estaria enfrente del relative
+Ademas podemos poner un absolucte dentro de un reltive y asi podras moverte solamente del tamaño del div o contenedor que tenga el relative
+
+OJO: Si hay un elemento con relative este estara delante de los demas, es decir que el aboslute o estara delante de él sino que detras
+
+-Position: fixed
+Se usa para colocar un elemento fijo, es decir que pase lo que pase, aunque muevas el raton o no va seguir fijo
+*/
+.relative-div {
+  background-color: rgb(221, 192, 139);
+  width: 600px;
+  height: 350px;
+  border: 2px solid black;
+}
+.relative1-foto {
+  width: 400px;
+  height: auto;
+  position: relative;
+  top: 30px;
+  left: 130px;
+}
+.relative2-foto {
+  position: absolute;
+}
+
+/*Position absolute*/
+.absolute-div {
+  background-color: rgb(169, 221, 139);
+  width: 600px;
+  height: 350px;
+  border: 2px solid black;
+  position: relative;
+}
+
+.absolute1-foto {
+  width: 360px;
+  height: auto;
+  position: absolute;
+  top: 120px;
+  left: 150px;
+  border: 4px solid black;
+}
+
+/*-- FONDO DEGRADADO --*/
+
+/*
+Se usa para combinar dos colores en el fondo y hacer un buen degradado
+
+Ejemplo:
+.fondo-degradado{
+
+    background:linear-gradient(40deg, blue, red); - (direccion, colo1 , color2, ...color5)                                                  
+}
+    0deg de arriba habia abajo 
+    90deg de izquierda a derecha
+    180deg de abajo hacia arriba
+    270deg de derecha a izquierda
+*/
+
+/*Fondo degradado*/
+.fondo-degradado {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+
+  background: linear-gradient(90deg, blue, rgb(94, 248, 158));
+}
+
+/*FUNCIONES MATEMATICAS DE CSS*/
+/*
+- CALC() -
+ Permite hacer calculos matematicos directamente dentro de CSS, suma'+', resta'-', multiplicacion'*', division'/'
+
+Ejemplo::
+.calc-div{
+
+    width: Calc(100% - 400px); - Restarle 400 pixeles al 100% del div o contenedor en el que esta
+    height: 300px;
+-------------------------------------------------------------------------------------
+- MIN() -
+Saca el valor minimo del elemento, quiere decir por ejemplo, de un 100% de la pantalla aparecera el elemento con 500px, en pocas palabaras se adapta al tamaño de la pantalla
+
+Ejemplo:
+.min-div{
+    width: min(500px, 100%); - de un 100% de la pantalla aparecera el elemento con 500px
+    height: 300px;
+    
+}
+-----------------------------------------------------------------------------------------------------------------------
+- MAX() -
+Saca el valor mayor del elemento, y el sistema esocge que parametro es meyor, por ejemplo poner que 400px sea el 100%
+
+- CLAMP() -
+Combina el min() y el max() en uno solo, es decir, que el minimo del 100% sea 100pixeles y que le maximo del 100% sea 400px
+
+*/
+
+/* Calc() */
+.calc-div {
+  background: linear-gradient(
+    180deg,
+    rgb(148, 245, 252),
+    rgb(241, 161, 237),
+    rgb(253, 126, 126)
+  );
+  border: 2px solid black;
+  height: 300px;
+
+  width: Calc(100% - 400px);
+}
+
+/* Min() */
+.min-div {
+  background: linear-gradient(180deg, rgb(75, 255, 129), rgb(253, 196, 111));
+  border: 2px solid black;
+  height: 300px;
+
+  width: min(500px, 100%);
+}
+
+/* Max() */
+.max-div {
+  background: linear-gradient(35deg, rgb(160, 255, 239), rgb(255, 109, 98));
+  border: 2px solid black;
+  height: 300px;
+
+  width: max(100px, 100%);
+}
+
+/* Clamp() */
+.clamp-div {
+  background: linear-gradient(70deg, rgb(101, 83, 207), rgb(235, 119, 196));
+  border: 2px solid black;
+  height: 300px;
+
+  width: clamp(100px, 100%, 400px);
+}
+
+/* -- PROPIEDADES PERSONALIZADAS - VARIABLES  -- */
+/*
+Para crear una variable sera en un :root{} y dentro de él ponemos '--' y un nombre para una variable y colocamos para que lo queremos colocandole un color por ejemplo,
+luego en el elemento que eramos usar la variable, colocamos lo que queremos cambiar como: background: ahi justo colocamos 'var()' y dentro de el ponemos el nombre de la variable
+
+Ejemplo: 
+
+:root{
+--fondoParrafo: rgb(1, 100, 95);
+--AnchoLetra: 150px;
+}
+
+.variable-parrafo{
+    background-color: var(--fondoParrafo);
+    width: var(--AnchoLetra);
+}
+
+*/
+/*Variable*/
+:root{
+--fondoParrafo: rgb(164, 255, 250);
+--AnchoLetra: 150px;
+}
+
+.variable-parrafo{
+    background-color: var(--fondoParrafo);
+    width: var(--AnchoLetra);
+    
+
+}
+
+/*VALIDACIONES DE ESTILO: */
+/*
+:valid: 
+Se usa este estilo dentro de un form para el 'imput' que confirma que si pusimos BIEN los parametros, colocando las acciones que queramos en el estilo 
+
+ejemplo:
+.validacion:valid{
+    border-color: rgb(255, 153, 0);
+}
+-------------------------------------------------------------------------------------------
+:invalid: 
+Se usa este estilo dentro de un form para el 'imput' que confirma que pusimos MAL los parametros, colocando las acciones que queramos en el estilo 
+
+ejemplo:
+.validacion:valid{
+    border-color: rgb(255, 153, 0);
+}
+
+
+*/
+
+/* :valid */
+.validacion:valid{
+    border-color: rgb(118, 228, 255);
+}
+
+.invalidacion:invalid{
+    border-color: rgb(255, 0, 21);
+}
+                                                                                                                                                              
