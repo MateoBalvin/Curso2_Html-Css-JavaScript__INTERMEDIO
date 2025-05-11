@@ -473,16 +473,14 @@ Ejemplo:
 
 */
 /*Variable*/
-:root{
---fondoParrafo: rgb(164, 255, 250);
---AnchoLetra: 150px;
+:root {
+  --fondoParrafo: rgb(164, 255, 250);
+  --AnchoLetra: 150px;
 }
 
-.variable-parrafo{
-    background-color: var(--fondoParrafo);
-    width: var(--AnchoLetra);
-    
-
+.variable-parrafo {
+  background-color: var(--fondoParrafo);
+  width: var(--AnchoLetra);
 }
 
 /*VALIDACIONES DE ESTILO: */
@@ -503,15 +501,188 @@ ejemplo:
     border-color: rgb(255, 153, 0);
 }
 
-
 */
 
 /* :valid */
-.validacion:valid{
-    border-color: rgb(118, 228, 255);
+.validacion:valid {
+  border-color: rgb(118, 228, 255);
 }
 
-.invalidacion:invalid{
-    border-color: rgb(255, 0, 21);
+/* :ivalid */
+.invalidacion:invalid {
+  border-color: rgb(255, 0, 21);
 }
-                                                                                                                                                              
+/* ---------------------------------------------------------------------------------------------- */
+
+/* --GRID-- */ /*
+Es similar al flex pero con ciertas diferencias
+
+display: grid; - Un elemento puede tener las propiedades de un grid con un display
+Si dentro del container esta el div que tiene  el grid, dentro de ese div no aplicara
+--------------------------------------------------------------------------------------
+ - COLUMNAS Y FILAS -
+-grid-template-columns: Permite en definir columnas
+-grid-template-rows: Permite definir las filas
+
+ejemplo:
+.grid1-container{
+  grid-template-columns: 50px 50px 50px; - Elige el espacio que queremos para la columna, ademas si colocamos mas espacios son las columnas que se crean, ejemplo si ponemos grid-template-columns: 50px 50px 50px - Se crearan 3 columnas con espacio de 50pixeles
+  
+  grid-template-rows: 50px 50px; - Elige el espacio que va haber entre la fila cada una, es decir cada fila que hagamos y queremos un buen espacio hay que poner, imagina margin-button, ejemplo si ponemos grid-template-row: 50px 30px -Que hay doy filas que creamos con espacio la primera fila de 50px y la segunda fila 30px
+}
+----------------------------------------------------------------------------------
+- Columnas y filas combinadas:
+
+ejemplo: 
+.grid1-container{
+
+ grid-template: 50px 50px / 50px 50px 50px - (FILAS - COLUMNAS)  Primero filas y luego columnas
+}
+
+------------------------------------------------------------------------------------------
+-Columnas y filas automaticas
+grid-auto-columns - grid-auto-rows: De esta forma, garantizamos que las nuevas pistas que la cuadrícula implícita crea para contenido adicional se configuren con los valores que definimos
+
+-------------------------------------------------------------------------------------------
+- Brecha entre las columnas y filas -
+.Column-gap: Se crea una brecha entre las columnas
+.Row-gap: Se crea la brecha entre las columnas
+
+Ejemplo:
+.grid1-container{
+  column-gap: 20px; Se crea un espacio entre las columnas, es deicr que se crea una brecha
+  row-gap: 10px; Se crea un espacio entre las filas
+}
+  ----------------------------------------------------------------------------------------------
+  - Incline-grid - POSICIONAMIENTO -
+  Se usa display: incline-grid;
+  Con este display lo que hace es que ajusta automatica el tamaño del contenedor donde queda por termnado los tamaños de los template-columns y los -template-rows
+
+  Ejemplo: 
+  .grid2-container{
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue;
+}
+-----------------------------------------------------------------------------------------------------------
+- Grid-colum-start y Grid-column-end -
+Los valores de sus propiedades representan las líneas de la cuadrícula de columnas con las que queremos que comience y termine.
+
+Ejemplo: 
+#living-room{
+  grid-column-start: 1; - Es el primer cuadrado que va a empezar combinando en la columna
+  grid-column-end: 6; - Es el ultimo cuadrado que va a combinar en la columna
+}
+-----------------------------------------------------------------------------------------------------------
+- Grid-row-start y Grid-row-end -
+Los valores de sus propiedades representan las líneas de la cuadrícula de filas con las que queremos que comience y termine.
+
+Ejemplo: 
+#living-room{
+  grid-row-start: 1; - Es el primer cuadrado que va a empezar combinando en la fila
+  grid-row-end: 6; - Es el ultimo cuadrado que va a combinar en la fila
+}
+
+- COMBINAR GRID-COLUMNS Y GRID-ROW -
+-grid-area: Combina grid-column y grid-row en uno solo
+
+Ejemplo:
+#living-room {
+  grid-area: 1 / 1 / 3 / 6;  -  (grid-row-start / grid-column-start / grid-row-end / grid-column-end)
+}
+
+
+*/
+
+.grid1-container {
+  background-color: rgb(195, 255, 235);
+  display: grid;
+}
+.grid-item {
+  border: 1px solid black;
+}
+
+/*- Columnas y filas -*/
+.grid1-container {
+  grid-template-columns: 50px 80px 50px; /*Elige el espacio que queremos para la columna, ademas si colocamos mas espacios son las columnas que se crean, ejemplo si ponemos grid-template-columns: 50px 50px 50px - Se crearan 3 columnas con espacio de 50pixeles*/
+  grid-template-rows: 50px 30px; /*Eligue el espacio que va haber entre la fila cada una, es decir cada fila que hagamos y queremos un buen espacio hay que poner, imagina margin-button, ejemplo si ponemos grid-template-row: 50px 30px -Que hay doy filas que creamos con espacio la primera fila de 50px y la segunda fila 30px*/
+
+  grid-auto-columns: 60px 50px; /*garantizamos que las nuevas pistas que la cuadrícula implícita crea para contenido adicional se configuren con los valores que definimos.*/
+  grid-auto-rows: 50px 30px;
+}
+
+/*-Brecha entre las filas y columnas*/
+.grid1-container {
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+/*-Posicionamiento-*/
+.grid2-container {
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue;
+}
+/* ---------------------------------------------------------------------------- */
+/* Ejemplo #1 de Incline-grid */
+.grid3-container {
+  background-color: darksalmon;
+  display: inline-grid;
+  grid-template: 50px 50px 50px 50px 50px / 50px 50px 50px 50px 50px;
+}
+
+.room {
+  border: 1px solid black;
+}
+
+#living-room {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+/* ------------------------------------------------------------------------------- */
+/* Ejemplo #2 de Incline-grid */
+.grid4-container{
+  border: 1px solid black;
+  display: inline-grid;
+  grid-template:50px 50px 50px 50px 50px / 70px 70px 70px 70px 70px;
+  background-color: violet;
+}
+
+#living-room2{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#kitchen2{
+  grid-column-start: 4;
+  grid-column-end: 6;
+
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+#bedroom2{
+  grid-column-start: 1;
+  
+
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+#bathroom2{
+  grid-column-start: 2;
+  grid-column-end:4;
+
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+#closet2{
+  grid-column-start: 2;
+  grid-column-end:4;
+}
+/*-----------------------------------------------------------------------------------*/
+
